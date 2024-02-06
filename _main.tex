@@ -10,13 +10,6 @@
 
 \usepackage{pdfpages}
 
-
-
-
-
-
-
-
 \usepackage{graphicx}
 %\usepackage{epic}
 %\usepackage{color}
@@ -34,11 +27,6 @@
 \usepackage[normalem]{ulem}
 
 
-
-
-
-
-
 \usepackage{longtable}
 \usepackage{tabularx}
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
@@ -53,12 +41,9 @@
 \usepackage{array}
 \usepackage{ragged2e}
 
-%\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\RaggedRight\let\newline\arraybackslash}m{#1}}
 
 \usepackage{adjustbox}
-
-
 
 
 %Equation z marginesami
@@ -92,32 +77,21 @@
 \usepackage[font={small},singlelinecheck=false]{caption}
 
 
-
 %---------------------------------------------------------
-%\usepackage{xcolor}
 
 \usepackage{stmaryrd} %dla podwójnego nawiasu w mathmode (przypisanie interpretacji formule/zdaniu) \llbracket \rrbracket
 \usepackage{textcomp} %dla podwójnego nawiasu w textmode (przypisanie interpretacji formule/zdaniu) \textlbrackdbl \textrbrackdbl
 \usepackage{tikz-cd}
 \usetikzlibrary{babel}
-%\usetikzlibrary{shapes.geometric}
 \usepackage[title]{appendix}
 
 
 \usepackage[hyphens,spaces,obeyspaces]{url}
-\usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robie linki hyperref
+\usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robi linki hyperref
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true, linktocpage}  %to sprawia że nie widać w pdfie aktywnych linków (od GM)
 \urlstyle{rm}
-%\usepackage[hyphens]{url}
-%\PassOptionsToPackage{hyphens}{url}%
-%\RequirePackage[hyphens]{url}
-
-
 
 %--------------------------------------------------------------------------------
-
-
-
 
 \usepackage[russian,polutonikogreek,greek,german,english,polish]{babel}
 \usepackage{textgreek}
@@ -127,31 +101,19 @@
 twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 %-----spady---------
+
 %\usepackage[cam,a4,center]{crop}
 %\usepackage[width=151mm,height=211mm,center,cam,noinfo]{crop} % konsultuj z dokumentacją
 %\usepackage[width=151mm,height=211mm,center,noinfo]{crop} % bex lini cięcia, konsultuj z dokumentacją
+
+%-------------------
 
 \input{hyphenation}
 
 
 
-
-%\usepackage{paralist}     %odstępy w listach
-%  \let\itemize\compactitem
-%  \let\enditemize\endcompactitem
-%  \let\enumerate\compactenum
-%  \let\endenumerate\endcompactenum
-%  \let\description\compactdesc
-%  \let\enddescription\endcompactdesc
-%  \pltopsep=\medskipamount
-%  \plitemsep=1pt
-%  \plparsep=1pt
-
 \usepackage{enumitem}
 \setlist{noitemsep} % lub \setlist{nosep}
-
-
-%%lamza
 
 \setlistdepth{8}
 \newlist{longitemize}{itemize}{8}
@@ -165,29 +127,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 \setlist[longitemize,8]{label=$\bullet$}
 
 \usepackage{scrextend}
-
-%%%%liana
-%\usepackage{mdframed} %sprawdzić, czy gdzieś nie szkodzi
-%\newtheoremstyle{sltheorem}
-%{0pt}                % Space above
-%{1em}                % Space below
-%{\small\mdseries}        % Theorem body font % (default is "\upshape")
-%{}                % Indent amount
-%{\itshape}       % Theorem head font % (default is \mdseries)
-%{.}               % Punctuation after theorem head % default: no punctuation
-%{ }               % Space after theorem head
-%{}                % Theorem head spec
-%\theoremstyle{sltheorem}
-%\newtheorem{uwaga}{Uwaga}
-%\surroundwithmdframed[linewidth=1pt,
-%linecolor=black,
-%bottomline=false,topline=false,rightline=false,
-%innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-%%outerrightmargin=0pt,outertopmargin=0pt,outerbottommargin=0pt,
-%innerleftmargin=.5em,% Distance between vertical rule & proof content
-%skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
-%]{uwaga}
-
 
 
 %------------------------- MyriadPro ------------------------------------
@@ -239,15 +178,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 
 
-%\usepackage{ebgaramond} % nice Garamond
-%\usepackage{xcharter} % alt font
-%\usepackage{baskervald} % alt font
-%\usepackage{qtimes}
-%\usepackage{txfonts}
-%\fontfamily{times}
-%\usepackage{mathptmx}
-%\fontfamily{qtimes-LF}
-%\usepackage{tgtermes}
 \renewcommand{\rmdefault}{txr}
 \renewcommand{\normalsize}{\fontsize{10.3}{15.2}\selectfont}
 \selectfont
@@ -1254,22 +1184,12 @@ backend=biber]{biblatex}
 % Komenda pozwala zmieniać interlinię w dokumencie
 
 
-%\usepackage{lipsum}
-
-
 
 \usepackage[shortcuts]{extdash} %hyphens
 
 
 
-
-
-
-
-
-
 \addto\captionspolish{\renewcommand{\figurename}{Ilustracja}}
-
 
 
 
@@ -1289,45 +1209,6 @@ backend=biber]{biblatex}
 \setlength\epigraphwidth{.5\textwidth}
 
 
-
-
-
-%------------------------------Theorem envs definitions for Olszewski's paper----------------------
-
-%---New enviroment with proof-like qed symbol
-\newcommand{\newmarkedtheorem}[1]{%
-	\newenvironment{#1}
-	{\pushQED{\qed}\csname inner@#1\endcsname}
-	{\popQED\csname endinner@#1\endcsname}%
-	\newtheorem{inner@#1}%
-}
-
-
-%---Qed symbol after last word in the line
-\DeclareRobustCommand{\qed}{%
-  \ifmmode%
-  \else \leavevmode\unskip\penalty9999 \hbox{}\nobreak%\hfill
-  \fi
-  \space\hbox{\qedsymbol}}
-  
-
-%---end-of-proof symbol
-\renewcommand{\qedsymbol}{\openbox}
-
-
-%---standard definitions
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Corollary}
-
-
-\theoremstyle{definition} \newmarkedtheorem{definition}{Definition}
-
-
-%---theorem with custom numbering/labelling
-\newtheorem{innercustomthm}{Theorem}
-\newenvironment{customthm}[1]
-  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
-  {\endinnercustomthm}
 
 
 
@@ -1378,17 +1259,17 @@ backend=biber]{biblatex}
 %\input{EDI_Krzanowski/Krzanowski.tex}
 
 
-\sekcja{Articles}{Artykuły}
+%\sekcja{Articles}{Artykuły}
 
 %\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 %\input{ART_Majid/Majid.tex} 
 %\renewcommand{\theequation}{\arabic{equation}}
 
 
-\input{ART_Brandelet/Brandelet.tex}
+%\input{ART_Brandelet/Brandelet.tex}
 \input{ART_Gim/Gim.tex}
-\input{ART_Hochstein/Hochstein.tex}
-\input{ART_Oleksowicz/Oleksowicz.tex}
+%\input{ART_Hochstein/Hochstein.tex}
+%\input{ART_Oleksowicz/Oleksowicz.tex}
 
 
 
@@ -1398,8 +1279,8 @@ backend=biber]{biblatex}
 %\sekcja{Reports}{Sprawozdania}
 
 
-\sekcja{Book reviews}{Recenzje}
-\input{REV_Barman/Barman.tex}
+%\sekcja{Book reviews}{Recenzje}
+%\input{REV_Barman/Barman.tex}
 
 
 %\sekcja{Review articles}{Artykuły recenzyjne}
