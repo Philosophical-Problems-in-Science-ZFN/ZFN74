@@ -82,7 +82,7 @@
 \usepackage{stmaryrd} %dla podwójnego nawiasu w mathmode (przypisanie interpretacji formule/zdaniu) \llbracket \rrbracket
 \usepackage{textcomp} %dla podwójnego nawiasu w textmode (przypisanie interpretacji formule/zdaniu) \textlbrackdbl \textrbrackdbl
 \usepackage{tikz-cd}
-\usetikzlibrary{babel}
+\usetikzlibrary{positioning,babel,arrows.meta}
 \usepackage[title]{appendix}
 
 
@@ -936,6 +936,7 @@ backend=biber]{biblatex}
 
 
 %\addbibresource{EDI_Krzanowski/xyz.bib}
+\addbibresource{ART_Karadimas/Karadimas.bib}
 \addbibresource{ART_Brandelet/Brandelet.bib}
 \addbibresource{ART_Gim/Gim.bib}
 \addbibresource{ART_Hochstein/Hochstein.bib}
@@ -1267,10 +1268,10 @@ backend=biber]{biblatex}
 %\renewcommand{\theequation}{\arabic{equation}}
 
 
-%\input{ART_Karadimas/Karadimas.tex}
+\input{ART_Karadimas/Karadimas.tex}
 %\input{ART_Hochstein/Hochstein.tex}
 %\input{ART_Gim/Gim.tex}
-\input{ART_Povich/Povich.tex}
+%\input{ART_Povich/Povich.tex}
 %\input{ART_Brandelet/Brandelet.tex}
 %\input{ART_Oleksowicz/Oleksowicz.tex}
 
