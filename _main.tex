@@ -578,6 +578,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 }
 
 \newcommand{\autorrec}[1]{\nopagebreak[4]\medskip\raggedleft{\large\textsc{#1}}\par}
+\newcommand{\autorrecaffil}[1]{\nopagebreak[4]\smallskip\raggedleft{#1}\par}
 %\newcommand{\autorrec}[1]{\nopagebreak[4]\smallskip\raggedleft{\recautor{#1}}\par}
 
 
@@ -935,7 +936,7 @@ backend=biber]{biblatex}
 
 
 
-%\addbibresource{EDI_Krzanowski/xyz.bib}
+\addbibresource{EDI_Wright/editorial.bib}
 \addbibresource{ART_Karadimas/Karadimas.bib}
 \addbibresource{ART_Brandelet/Brandelet.bib}
 \addbibresource{ART_Gim/Gim.bib}
@@ -943,6 +944,8 @@ backend=biber]{biblatex}
 \addbibresource{ART_Povich/Povich.bib}
 \addbibresource{ART_Oleksowicz/Oleksowicz.bib}
 \addbibresource{REV_Barman/Barman.bib}
+\addbibresource{REV_Muntean/Muntean.bib}
+\addbibresource{REV_Malfatti/Malfatti.bib}
 
 
 
@@ -1258,7 +1261,7 @@ backend=biber]{biblatex}
 
 %\sekcjatoconly{Editorial}{Od redakcji}
 
-%\input{EDI_Krzanowski/Krzanowski.tex}
+%\input{EDI_Wright/Wright.tex}
 
 
 %\sekcja{Articles}{Artykuły}
@@ -1268,7 +1271,7 @@ backend=biber]{biblatex}
 %\renewcommand{\theequation}{\arabic{equation}}
 
 
-\input{ART_Karadimas/Karadimas.tex}
+%\input{ART_Karadimas/Karadimas.tex}
 %\input{ART_Hochstein/Hochstein.tex}
 %\input{ART_Gim/Gim.tex}
 %\input{ART_Povich/Povich.tex}
@@ -1285,6 +1288,8 @@ backend=biber]{biblatex}
 
 %\sekcja{Book reviews}{Recenzje}
 %\input{REV_Barman/Barman.tex}
+\input{REV_Muntean/Muntean.tex}
+%\input{REV_Malfatti/Malfatti.tex}
 
 
 %\sekcja{Review articles}{Artykuły recenzyjne}
