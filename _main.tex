@@ -164,7 +164,8 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 
 \newenvironment{rectitle}{\fontfamily{\sansfontype}\fontseries{eb}\fontshape{n}\fontsize{16}{15}\selectfont}{}
-\newenvironment{reclight}{\fontfamily{\sansfontype}\fontseries{n}\fontshape{n}\fontsize{12}{14}\selectfont}{}
+\newenvironment{reclight}{\fontfamily{\sansfontype}\fontseries{m}\fontshape{n}\fontsize{12}{14}\selectfont}{}
+%\newenvironment{reclightit}{\fontfamily{\sansfontype}\fontseries{m}\fontshape{it}\fontsize{12}{14}\selectfont}{}
 \newenvironment{recautor}{\fontfamily{\sansfontype}\fontseries{l}\fontshape{it}\fontsize{11}{13}\selectfont}{}
 
 \newenvironment{toclight}{\fontfamily{\sansfontype}\fontseries{l}\fontshape{n}\fontsize{12}{14}\selectfont}{}
@@ -516,6 +517,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
 	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
+	\begin{refsection}%
 		\pasekeng%
 		\begin{raggedleft}%
 			\selectlanguage{english} %
@@ -523,14 +525,17 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 %			\vspace{3mm}%
 %			{\flushright\chaptitleeng\color{black!50}{#5}}\par%
 %			\vspace{5mm}%
-			{\flushright\subbold{#1}\par}%
-			\vspace{5mm}%
+			{\flushright\subbold{#1}\\\subsubsectit\small{#5}\par}%
 		\end{raggedleft}%
 		\vspace{5mm}%
 		\selectlanguage{english}%
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 }%
 {%
+\section*{Bibliography}%
+		\printbibliography[heading=none]\nopagebreak[4]%
+		\label{e\tocnr}%
+	\end{refsection}%
 \label{e\tocnr}%
 }
 
@@ -1012,6 +1017,17 @@ backend=biber]{biblatex}
         \usebibmacro{url+urldate}}%
         {}%
     }
+    
+%don't print "[Online]" keyword
+\renewbibmacro*{isonline}{}
+
+%Ensuring the name of the translator is not occuring twice in articles
+\xpatchbibdriver{article}{
+  \usebibmacro{byeditor+others}}{}{}{\wlog{WARNING: biblatex-bath failed to patch article driver}}
+
+
+
+
 
 %\newcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
 %\DeclareFieldFormat{doi}{DOI\addcolon\space\url[#1]{https://doi.org/#1}}
@@ -1259,24 +1275,24 @@ backend=biber]{biblatex}
 %\input{default.tex}
 
 
-%\sekcjatoconly{Editorial}{Od redakcji}
+\sekcjatoconly{Editorial}{Od redakcji}
 
-%\input{EDI_Wright/Wright.tex}
+\input{EDI_Wright/Wright.tex}
 
 
-%\sekcja{Articles}{Artykuły}
+\sekcja{Articles}{Artykuły}
 
 %\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 %\input{ART_Majid/Majid.tex} 
 %\renewcommand{\theequation}{\arabic{equation}}
 
 
-%\input{ART_Karadimas/Karadimas.tex}
-%\input{ART_Hochstein/Hochstein.tex}
-%\input{ART_Gim/Gim.tex}
-%\input{ART_Povich/Povich.tex}
-%\input{ART_Brandelet/Brandelet.tex}
-%\input{ART_Oleksowicz/Oleksowicz.tex}
+\input{ART_Karadimas/Karadimas.tex}
+\input{ART_Hochstein/Hochstein.tex}
+\input{ART_Gim/Gim.tex}
+\input{ART_Povich/Povich.tex}
+\input{ART_Brandelet/Brandelet.tex}
+\input{ART_Oleksowicz/Oleksowicz.tex}
 
 
 
@@ -1286,10 +1302,10 @@ backend=biber]{biblatex}
 %\sekcja{Reports}{Sprawozdania}
 
 
-%\sekcja{Book reviews}{Recenzje}
-%\input{REV_Barman/Barman.tex}
+\sekcja{Book reviews}{Recenzje}
+\input{REV_Barman/Barman.tex}
 \input{REV_Muntean/Muntean.tex}
-%\input{REV_Malfatti/Malfatti.tex}
+\input{REV_Malfatti/Malfatti.tex}
 
 
 %\sekcja{Review articles}{Artykuły recenzyjne}
