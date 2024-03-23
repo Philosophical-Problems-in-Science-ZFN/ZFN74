@@ -10,13 +10,6 @@
 
 \usepackage{pdfpages}
 
-
-
-
-
-
-
-
 \usepackage{graphicx}
 %\usepackage{epic}
 %\usepackage{color}
@@ -34,11 +27,6 @@
 \usepackage[normalem]{ulem}
 
 
-
-
-
-
-
 \usepackage{longtable}
 \usepackage{tabularx}
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
@@ -53,12 +41,9 @@
 \usepackage{array}
 \usepackage{ragged2e}
 
-%\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\RaggedRight\let\newline\arraybackslash}m{#1}}
 
 \usepackage{adjustbox}
-
-
 
 
 %Equation z marginesami
@@ -92,68 +77,43 @@
 \usepackage[font={small},singlelinecheck=false]{caption}
 
 
-
 %---------------------------------------------------------
-%\usepackage{xcolor}
 
 \usepackage{stmaryrd} %dla podwójnego nawiasu w mathmode (przypisanie interpretacji formule/zdaniu) \llbracket \rrbracket
 \usepackage{textcomp} %dla podwójnego nawiasu w textmode (przypisanie interpretacji formule/zdaniu) \textlbrackdbl \textrbrackdbl
 \usepackage{tikz-cd}
-\usetikzlibrary{babel}
-%\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning,babel,arrows.meta}
 \usepackage[title]{appendix}
 
 
 \usepackage[hyphens,spaces,obeyspaces]{url}
-\usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robie linki hyperref
+\usepackage{hyperref} %to nowsza wersja pakietu url, lepsza m.in. robi linki hyperref
 \hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, breaklinks=true, linktocpage}  %to sprawia że nie widać w pdfie aktywnych linków (od GM)
 \urlstyle{rm}
-%\usepackage[hyphens]{url}
-%\PassOptionsToPackage{hyphens}{url}%
-%\RequirePackage[hyphens]{url}
-
-
 
 %--------------------------------------------------------------------------------
-
-
-
 
 \usepackage[russian,polutonikogreek,greek,german,english,polish]{babel}
 \usepackage{textgreek}
 
 \usepackage{geometry}
-%\geometry{verbose,paperwidth=145mm,paperheight=205mm,landscape=false,
-%twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 \geometry{verbose,paperwidth=750mm,paperheight=1013mm,landscape=false,
 twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 %-----spady---------
+
 %\usepackage[cam,a4,center]{crop}
 %\usepackage[width=151mm,height=211mm,center,cam,noinfo]{crop} % konsultuj z dokumentacją
 %\usepackage[width=151mm,height=211mm,center,noinfo]{crop} % bex lini cięcia, konsultuj z dokumentacją
+
+%-------------------
 
 \input{hyphenation}
 
 
 
-
-%\usepackage{paralist}     %odstępy w listach
-%  \let\itemize\compactitem
-%  \let\enditemize\endcompactitem
-%  \let\enumerate\compactenum
-%  \let\endenumerate\endcompactenum
-%  \let\description\compactdesc
-%  \let\enddescription\endcompactdesc
-%  \pltopsep=\medskipamount
-%  \plitemsep=1pt
-%  \plparsep=1pt
-
 \usepackage{enumitem}
 \setlist{noitemsep} % lub \setlist{nosep}
-
-
-%%lamza
 
 \setlistdepth{8}
 \newlist{longitemize}{itemize}{8}
@@ -167,29 +127,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 \setlist[longitemize,8]{label=$\bullet$}
 
 \usepackage{scrextend}
-
-%%%%liana
-%\usepackage{mdframed} %sprawdzić, czy gdzieś nie szkodzi
-%\newtheoremstyle{sltheorem}
-%{0pt}                % Space above
-%{1em}                % Space below
-%{\small\mdseries}        % Theorem body font % (default is "\upshape")
-%{}                % Indent amount
-%{\itshape}       % Theorem head font % (default is \mdseries)
-%{.}               % Punctuation after theorem head % default: no punctuation
-%{ }               % Space after theorem head
-%{}                % Theorem head spec
-%\theoremstyle{sltheorem}
-%\newtheorem{uwaga}{Uwaga}
-%\surroundwithmdframed[linewidth=1pt,
-%linecolor=black,
-%bottomline=false,topline=false,rightline=false,
-%innerrightmargin=0pt,innertopmargin=0pt,innerbottommargin=0pt,
-%%outerrightmargin=0pt,outertopmargin=0pt,outerbottommargin=0pt,
-%innerleftmargin=.5em,% Distance between vertical rule & proof content
-%skipabove=1em,splittopskip=0pt,splitbottomskip=0pt%
-%]{uwaga}
-
 
 
 %------------------------- MyriadPro ------------------------------------
@@ -321,10 +258,10 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 \newcommand{\zfntitle}{Zagadnienia Filozoficzne w~Nauce}
 \newcommand{\zfntitleeng}{Philosophical Problems in Science}
-\newcommand{\rok}{2022} % lub rok
+\newcommand{\rok}{2023} % lub rok
 %\newcommand{\rok}{\the\year} % lub rok
-\newcommand{\numerarabski}{73}
-\newcommand{\numerrzymski}{LXXIII}
+\newcommand{\numerarabski}{74}
+\newcommand{\numerrzymski}{LXXIV}
 \newcommand{\infbiblio}{\zfntitle, nr \numerarabski\ (\rok), ss.~}
 \newcommand{\infbiblioeng}{\zfntitle, No \numerarabski\ (\rok), pp.~}
 
@@ -371,6 +308,28 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\begin{footnotesize}CC-BY-NC-ND 4.0\end{footnotesize}\end{subsubsectit}%
 		\enspace\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{_images/CC-BY-NC-ND}}}%
 }
+
+
+%\newcommand{\pasekpl}{%
+%	\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\begin{small}%
+%				\zfntitle\: (\zfntitleeng)%
+%		\par\vspace{.1mm}%
+%		nr \numerarabski\ (\rok), %
+%		ss.~\pageref*{\tocnr}\textendash\pageref*{e\tocnr} \enspace $\bullet$ \enspace\end{small}%
+%	\begin{footnotesize}CC-BY-NC-ND 4.0\end{footnotesize}\end{subsubsectit}%
+%		\enspace\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{_images/CC-BY-NC-ND}}}%
+%}
+%\newcommand{\pasekeng}{%
+%	\placetextbox{153mm}{-3mm}{\begin{subsubsectit}\begin{small}%
+%				\zfntitleeng\: (ZFN), \enspace%
+%				No \numerarabski\ (\rok), %
+%						pp.~\pageref*{\tocnr}\textendash\pageref*{e\tocnr} %
+%		\par\vspace{.1mm}%
+%			DOI: xxxxxxxxxxxxxxxxx
+%		 \enspace $\bullet$ \enspace\end{small}%
+%		\begin{footnotesize}CC-BY-NC-ND 4.0\end{footnotesize}\end{subsubsectit}%
+%		\enspace\raisebox{-1.75pt}{\includegraphics[height=9.5pt]{_images/CC-BY-NC-ND}}}%
+%}
 
 
 
@@ -453,7 +412,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 		}%
 	{%
-		\pagebreak
 		\section*{Bibliography}%
 		\printbibliography[heading=none]\nopagebreak[4]%
 		\label{e\tocnr}%
@@ -492,7 +450,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 		}%
 	{%
-	\pagebreak
 		\section*{Bibliography}\nopagebreak[4]%
 		\printbibliography[heading=none]%
 		\label{e\tocnr}%
@@ -533,7 +490,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 	\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 	}%
 {%
-\pagebreak
 	\section*{Bibliografia}%
 	\printbibliography[heading=none]\nopagebreak[4]%
 	\label{e\tocnr}%
@@ -591,6 +547,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 	\addtocontents{toc}{\noindent{\tocname{#1}}\\}%
 	\addtocontents{toc}{{\toctititem#4}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 	\addtocontents{toc}{\vskip.8\baselineskip}
+	\begin{refsection}%
 		\pasekeng%
 		\begin{raggedleft}%
 			\selectlanguage{english} %
@@ -598,14 +555,17 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 %			\vspace{3mm}%
 %			{\flushright\chaptitleeng\color{black!50}{#5}}\par%
 %			\vspace{5mm}%
-			{\flushright\subbold{#1}\par}%
-			\vspace{5mm}%
+			{\flushright\subbold{#1}\\\subsubsectit\small{#5}\par}%
 		\end{raggedleft}%
 		\vspace{5mm}%
 		\selectlanguage{english}%
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 }%
 {%
+\section*{Bibliography}%
+		\printbibliography[heading=none]\nopagebreak[4]%
+		\label{e\tocnr}%
+	\end{refsection}%
 \label{e\tocnr}%
 }
 
@@ -643,7 +603,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\addtocontents{toc}{{\toctititem#3}\dotfill{\subsubsectit\pageref{\tocnr}}}%
 		\addtocontents{toc}{\vskip.8\baselineskip}}%
 	{%
-	\pagebreak
 		\begin{spacing}{0.9}%
 			\printbibliography[heading=none]%
 		\end{spacing}%
@@ -654,6 +613,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 }
 
 \newcommand{\autorrec}[1]{\nopagebreak[4]\medskip\raggedleft{\large\textsc{#1}}\par}
+\newcommand{\autorrecaffil}[1]{\nopagebreak[4]\smallskip\raggedleft{#1}\par}
 %\newcommand{\autorrec}[1]{\nopagebreak[4]\smallskip\raggedleft{\recautor{#1}}\par}
 
 
@@ -728,7 +688,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 		}%
 	{%
-	\pagebreak
 		\section*{Bibliografia}%
 		\printbibliography[heading=none]\nopagebreak[4]%
 		\label{e\tocnr}%
@@ -765,7 +724,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 		}%
 	{%
-	\pagebreak
 		\section*{Bibliografia}%
 		\printbibliography[heading=none]\nopagebreak[4]%
 		\label{e\tocnr}%
@@ -802,7 +760,6 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\markboth{\pagname\protect{#1}}{\pagtit\protect{#3}}%
 		}%
 	{%
-	\pagebreak
 		\section*{Bibliography}%
 		\printbibliography[heading=none]\nopagebreak[4]%
 		\label{e\tocnr}%
@@ -930,7 +887,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 
 
 \newcommand{\sekcja}[2]{%
-	\clearpage
+	\cleardoublepage
 	\thispagestyle{empty}
 	\vspace*{1.7in}%
 	\begin{flushright}
@@ -939,7 +896,7 @@ twoside,top=25mm,bottom=20mm,left=23mm,right=23mm,headheight=14pt}
 		\chaptitleeng\color{black!50}{#2}\par
 	\end{flushright}
 	\vfill
-	\clearpage
+	\cleardoublepage
 %	\addcontentsline{toc}{chapter}{#1}%
 	\addtocontents{toc}{\vskip0.7\baselineskip}
 	\addtocontents{toc}{%
@@ -1014,6 +971,17 @@ backend=biber]{biblatex}
 
 
 
+\addbibresource{EDI_Wright/editorial.bib}
+\addbibresource{ART_Karadimas/Karadimas.bib}
+\addbibresource{ART_Brandelet/Brandelet.bib}
+\addbibresource{ART_Gim/Gim.bib}
+\addbibresource{ART_Hochstein/Hochstein.bib}
+\addbibresource{ART_Povich/Povich.bib}
+\addbibresource{ART_Oleksowicz/Oleksowicz.bib}
+\addbibresource{REV_Barman/Barman.bib}
+\addbibresource{REV_Muntean/Muntean.bib}
+\addbibresource{REV_Malfatti/Malfatti.bib}
+
 
 
 
@@ -1079,6 +1047,17 @@ backend=biber]{biblatex}
         \usebibmacro{url+urldate}}%
         {}%
     }
+    
+%don't print "[Online]" keyword
+\renewbibmacro*{isonline}{}
+
+%Ensuring the name of the translator is not occuring twice in articles
+\xpatchbibdriver{article}{
+  \usebibmacro{byeditor+others}}{}{}{\wlog{WARNING: biblatex-bath failed to patch article driver}}
+
+
+
+
 
 %\newcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
 %\DeclareFieldFormat{doi}{DOI\addcolon\space\url[#1]{https://doi.org/#1}}
@@ -1256,22 +1235,12 @@ backend=biber]{biblatex}
 % Komenda pozwala zmieniać interlinię w dokumencie
 
 
-%\usepackage{lipsum}
-
-
 
 \usepackage[shortcuts]{extdash} %hyphens
 
 
 
-
-
-
-
-
-
 \addto\captionspolish{\renewcommand{\figurename}{Ilustracja}}
-
 
 
 
@@ -1292,56 +1261,6 @@ backend=biber]{biblatex}
 
 
 
-
-
-%------------------------------Theorem envs definitions for Olszewski's paper----------------------
-
-%---New enviroment with proof-like qed symbol
-\newcommand{\newmarkedtheorem}[1]{%
-	\newenvironment{#1}
-	{\pushQED{\qed}\csname inner@#1\endcsname}
-	{\popQED\csname endinner@#1\endcsname}%
-	\newtheorem{inner@#1}%
-}
-
-
-%---Qed symbol after last word in the line
-\DeclareRobustCommand{\qed}{%
-  \ifmmode%
-  \else \leavevmode\unskip\penalty9999 \hbox{}\nobreak%\hfill
-  \fi
-  \space\hbox{\qedsymbol}}
-  
-
-%---end-of-proof symbol
-\renewcommand{\qedsymbol}{\openbox}
-
-
-%---standard definitions
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Corollary}
-
-
-\theoremstyle{definition} \newmarkedtheorem{definition}{Definition}
-
-
-%---theorem with custom numbering/labelling
-\newtheorem{innercustomthm}{Theorem}
-\newenvironment{customthm}[1]
-  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
-  {\endinnercustomthm}
-
-
-\addbibresource{EDI_Wright/editorial.bib}
-\addbibresource{ART_Karadimas/Karadimas.bib}
-\addbibresource{ART_Brandelet/Brandelet.bib}
-\addbibresource{ART_Gim/Gim.bib}
-\addbibresource{ART_Hochstein/Hochstein.bib}
-\addbibresource{ART_Povich/Povich.bib}
-\addbibresource{ART_Oleksowicz/Oleksowicz.bib}
-\addbibresource{REV_Barman/Barman.bib}
-\addbibresource{REV_Muntean/Muntean.bib}
-\addbibresource{REV_Malfatti/Malfatti.bib}
 
 
 
