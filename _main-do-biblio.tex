@@ -1014,24 +1014,6 @@ backend=biber]{biblatex}
 
 
 
-%\addbibresource{EDI_Krzanowski/xyz.bib}
-\addbibresource{ART_Dodig-Crnkovic/Dodig-Crnkovic.bib}
-\addbibresource{ART_Toscano/Toscano.bib}
-\addbibresource{ART_Martin/Martin.bib}
-\addbibresource{ART_Noh/Noh.bib}
-\addbibresource{ART_Mscislawski/Mscislaw.bib}
-\addbibresource{ART_Sekrst/Sekrst.bib}
-\addbibresource{ART_Soloducha/Soloducha.bib}
-\addbibresource{ART_Krzanowski_Polak/Krzanowski_Polak.bib}
-
-
-\addbibresource{ESS_Olszewski/Olszewski.bib}
-\addbibresource{ESS_Trzesicki/Trzesicki.bib}
-
-
-\addbibresource{REV_Mscislawski/Mscislawski.bib}
-\addbibresource{REV_Polak2/Polak2.bib}
-\addbibresource{REV_Polak1/Polak1.bib}
 
 
 
@@ -1350,6 +1332,17 @@ backend=biber]{biblatex}
   {\endinnercustomthm}
 
 
+\addbibresource{EDI_Wright/editorial.bib}
+\addbibresource{ART_Karadimas/Karadimas.bib}
+\addbibresource{ART_Brandelet/Brandelet.bib}
+\addbibresource{ART_Gim/Gim.bib}
+\addbibresource{ART_Hochstein/Hochstein.bib}
+\addbibresource{ART_Povich/Povich.bib}
+\addbibresource{ART_Oleksowicz/Oleksowicz.bib}
+\addbibresource{REV_Barman/Barman.bib}
+\addbibresource{REV_Muntean/Muntean.bib}
+\addbibresource{REV_Malfatti/Malfatti.bib}
+
 
 
 
@@ -1393,68 +1386,41 @@ backend=biber]{biblatex}
 %\input{default.tex}
 
 
+\sekcjatoconly{Editorial}{Od redakcji}
+
+\input{EDI_Wright/Wright.tex}
 
 
-
-%\sekcjatoconly{Editorial}{Od redakcji}
-
-%\input{EDI/editorial-PU.tex}
-\input{EDI_Krzanowski/Krzanowski.tex}
-
-
-%\sekcja{Articles}{Artykuły}
+\sekcja{Articles}{Artykuły}
 
 %\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 %\input{ART_Majid/Majid.tex} 
 %\renewcommand{\theequation}{\arabic{equation}}
 
 
-\input{ART_Dodig-Crnkovic/Dodig-Crnkovic.tex}
-\input{ART_Toscano/Toscano.tex}
-\input{ART_Martin/Martin.tex}
-\input{ART_Noh/Noh.tex}
-\input{ART_Mscislawski/Mscislaw.tex}
-\input{ART_Sekrst/Sekrst.tex}
-\input{ART_Krzanowski_Polak/Krzanowski_Polak.tex}
-\input{ART_Soloducha/Soloducha.tex}
+\input{ART_Karadimas/Karadimas.tex}
+\input{ART_Hochstein/Hochstein.tex}
+\input{ART_Gim/Gim.tex}
+\input{ART_Povich/Povich.tex}
+\input{ART_Brandelet/Brandelet.tex}
+\input{ART_Oleksowicz/Oleksowicz.tex}
+
 
 
 %\addtocontents{toc}{\protect\pagebreak}
 %\sekcja{Essays}{Eseje}
-
-\input{ESS_Olszewski/Olszewski.tex}
-\input{ESS_Trzesicki/Trzesicki.tex}
-
-
-
-
-
-
-%\addtocontents{toc}{\protect\pagebreak}
-
-
-
-
 %\sekcja{Proceedings of the PAU Commission\\\ on the Philosophy of Science}{Z prac Komisji Filozofii Nauk PAU}
-%\input{grygiel/grygiel.tex}
-%\input{oramus/oramus.tex}
-
-
-
 %\sekcja{Reports}{Sprawozdania}
-%\input{REP_Gradzka/gradzka.tex}
 
 
+\sekcja{Book reviews}{Recenzje}
+\input{REV_Barman/Barman.tex}
+\input{REV_Muntean/Muntean.tex}
+\input{REV_Malfatti/Malfatti.tex}
 
-%\addtocontents{toc}{\protect\pagebreak}
+
 %\sekcja{Review articles}{Artykuły recenzyjne}
-
-
-
-
-\input{REV_Polak2/Polak2.tex}
-\input{REV_Polak1/Polak1.tex}
-\input{REV_Mscislawski/Mscislawski.tex}
+%\input{REV_Mscislawski/Mscislawski.tex}
 
 
 
